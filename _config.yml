@@ -14,12 +14,12 @@ author:
   github: ismnoiet
   twitter: ham_ism
   gplus: hamisml
+  disqus: ham_ism 
   # disqus: your_disqus_username
 
 # google_analytics: 'UA-XXXXXXXX-X'
 
 gems:
-  - jekyll-gist
-  
+  - jekyll-gist 
 # Build settings
 markdown: kramdown

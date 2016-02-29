@@ -1,6 +1,7 @@
 ---
   layout: post
   title: A must-have list of plugins for sublime text
+  comments: true
   tags: 
   categories: 
     - tools
@@ -42,8 +43,6 @@ Those plugins are pretty convenient when it comes to picking and choosing colors
 **Strings manipulation Related**
 
 * [Case Convertion](https://github.com/jdc0589/CaseConversion) : An awesome plugin to convert strings and switch  cases from camel case to snake case to whatever case you want.
-
-
 
 
 *Note* :
