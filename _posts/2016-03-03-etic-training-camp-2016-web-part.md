@@ -6,10 +6,10 @@
 ---
 
 ### Introduction
-First of all i want to say **Thank you** for **etic club** for organizing that event, it was really an interesting training camp, without forgetting the team that was under my belt you were a nice team and i enjoyed working with every one of you.
+First of all i want to say **Thank you** for **etic club** for organizing such a great event, it was really an interesting training camp, without forgetting the team that was under my belt you were a nice team and i enjoyed working with every one of you.
 Now let's start talking about what we've done in a nutshell.
 
-![the web in a nutshell]({{ site.url }}/assets/img/theweb.jpg)
+![the web in a nutshell](https://raw.githubusercontent.com/ismnoiet/ismnoiet.github.io/master/assets/img/theweb.png)
 #### HTML(Hyper Text Markup Language) :
 HTML is the language used to structure web pages, every single web page is initialy **an HTML page** .( [learn more](http://google.com) )
 
