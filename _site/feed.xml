@@ -6,9 +6,153 @@
 </description>
     <link>https://ismnoiet.github.io/</link>
     <atom:link href="https://ismnoiet.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 01 Mar 2016 10:13:25 +0100</pubDate>
-    <lastBuildDate>Tue, 01 Mar 2016 10:13:25 +0100</lastBuildDate>
+    <pubDate>Sat, 05 Mar 2016 00:13:21 +0100</pubDate>
+    <lastBuildDate>Sat, 05 Mar 2016 00:13:21 +0100</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
+    
+      <item>
+        <title>Etic Training Camp 2016 &quot;Web Part&quot;</title>
+        <description>&lt;h3 id=&quot;introduction&quot;&gt;Introduction&lt;/h3&gt;
+&lt;p&gt;First of all i want to say &lt;strong&gt;Thank you&lt;/strong&gt; for &lt;strong&gt;etic club&lt;/strong&gt; for organizing that event, it was really an interesting training camp, without forgetting the team that was under my belt you were a nice team and i enjoyed working with every one of you.
+Now let’s start talking about what we’ve done in a nutshell.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://ismnoiet.github.io/assets/img/theweb.jpg&quot; alt=&quot;the web in a nutshell&quot; /&gt;
+#### HTML(Hyper Text Markup Language) :
+HTML is the language used to structure web pages, every single web page is initialy &lt;strong&gt;an HTML page&lt;/strong&gt; .( &lt;a href=&quot;http://google.com&quot;&gt;learn more&lt;/a&gt; )&lt;/p&gt;
+
+&lt;p&gt;Here is the snippet of code used to explain HTML and some  essential tags  used during the training camp:&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+	&amp;lt;title&amp;gt;training camp etic 2016&amp;lt;/title&amp;gt;
+	&amp;lt;!-- inlude style file  --&amp;gt;
+	&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; type=&amp;quot;text/css&amp;quot; href=&amp;quot;style.css&amp;quot;&amp;gt;
+
+
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+	&amp;lt;script src=&amp;quot;test.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+
+ 	&amp;lt;!--1 headers 	 --&amp;gt;
+ 	&amp;lt;h1 style=&amp;quot;color:red&amp;quot;&amp;gt;h1&amp;lt;/h1&amp;gt;
+ 	&amp;lt;!--embed js code whting html--&amp;gt;
+ 	&amp;lt;h2 onclick=&amp;quot;alert(&amp;#39;hello&amp;#39;);&amp;quot;&amp;gt;h2&amp;lt;/h2&amp;gt;
+ 	&amp;lt;h3&amp;gt;h3&amp;lt;/h3&amp;gt;
+ 	&amp;lt;h4&amp;gt;h4&amp;lt;/h4&amp;gt;
+ 	&amp;lt;h5&amp;gt;h5&amp;lt;/h5&amp;gt;
+ 	&amp;lt;h6&amp;gt;h6&amp;lt;/h6&amp;gt;
+
+	&amp;lt;!--2 paragraphs  --&amp;gt;
+ 	&amp;lt;p id=&amp;quot;p1&amp;quot; class=&amp;quot;p1&amp;quot;&amp;gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, voluptate?&amp;lt;/p&amp;gt;
+
+ 	&amp;lt;!--3 include images	 --&amp;gt;
+	&amp;lt;img src=&amp;quot;test.png&amp;quot;&amp;gt;
+		
+	&amp;lt;div&amp;gt;&amp;lt;/div&amp;gt;	
+	
+	
+	&amp;lt;!--4 lists --&amp;gt;
+	&amp;lt;!-- unordered lists --&amp;gt;
+	&amp;lt;ul&amp;gt;
+		&amp;lt;li&amp;gt;item1&amp;lt;/li&amp;gt;
+		&amp;lt;li&amp;gt;item2&amp;lt;/li&amp;gt;
+		&amp;lt;li&amp;gt;item3&amp;lt;/li&amp;gt;
+	&amp;lt;/ul&amp;gt;	
+
+	&amp;lt;!-- ordered lists --&amp;gt;
+	&amp;lt;ol&amp;gt;
+		&amp;lt;li&amp;gt;item1&amp;lt;/li&amp;gt;
+		&amp;lt;li&amp;gt;item2&amp;lt;/li&amp;gt;
+		&amp;lt;li&amp;gt;item3&amp;lt;/li&amp;gt;		
+	&amp;lt;/ol&amp;gt;
+
+	&amp;lt;!--5 tables	 --&amp;gt;
+	&amp;lt;table&amp;gt;
+		&amp;lt;thead&amp;gt;
+			&amp;lt;tr&amp;gt;
+				&amp;lt;th&amp;gt;item1&amp;lt;/th&amp;gt;
+				&amp;lt;th&amp;gt;item2&amp;lt;/th&amp;gt;
+			&amp;lt;/tr&amp;gt;
+		&amp;lt;/thead&amp;gt;
+		&amp;lt;tbody&amp;gt;
+			&amp;lt;tr&amp;gt;
+				&amp;lt;td&amp;gt;item1&amp;lt;/td&amp;gt;
+				&amp;lt;td&amp;gt;item2&amp;lt;/td&amp;gt;
+			&amp;lt;/tr&amp;gt;&amp;lt;tr&amp;gt;
+				&amp;lt;td&amp;gt;item1&amp;lt;/td&amp;gt;
+				&amp;lt;td&amp;gt;item2&amp;lt;/td&amp;gt;
+			&amp;lt;/tr&amp;gt;&amp;lt;tr&amp;gt;
+				&amp;lt;td&amp;gt;item1&amp;lt;/td&amp;gt;
+				&amp;lt;td&amp;gt;item2&amp;lt;/td&amp;gt;
+			&amp;lt;/tr&amp;gt;&amp;lt;tr&amp;gt;
+				&amp;lt;td&amp;gt;item1&amp;lt;/td&amp;gt;
+				&amp;lt;td&amp;gt;item2&amp;lt;/td&amp;gt;
+			&amp;lt;/tr&amp;gt;
+		&amp;lt;/tbody&amp;gt;
+	&amp;lt;/table&amp;gt;
+	
+	&amp;lt;!--6 html5 new tags  --&amp;gt;
+	&amp;lt;header&amp;gt;&amp;lt;/header&amp;gt;
+	&amp;lt;footer&amp;gt;&amp;lt;/footer&amp;gt;
+	&amp;lt;aside&amp;gt;&amp;lt;/aside&amp;gt;
+	&amp;lt;nav&amp;gt;&amp;lt;/nav&amp;gt;
+	&amp;lt;section&amp;gt;&amp;lt;/section&amp;gt;	
+	&amp;lt;!-- .... --&amp;gt;
+	
+
+	&amp;lt;div class=&amp;quot;p1&amp;quot;&amp;gt;
+		my name is &amp;lt;span&amp;gt;hamza&amp;lt;/span&amp;gt;
+		my name is &amp;lt;span&amp;gt;blabla&amp;lt;/span&amp;gt;
+	&amp;lt;/div&amp;gt;
+
+	&amp;lt;div class=&amp;quot;p1&amp;quot;&amp;gt;		
+		&amp;lt;div&amp;gt;
+			&amp;lt;span&amp;gt;skdfjkdjf&amp;lt;/span&amp;gt;
+		&amp;lt;/div&amp;gt;
+	&amp;lt;/div&amp;gt;
+
+	&amp;lt;!--7 include js  --&amp;gt;
+	&amp;lt;script src=&amp;quot;test2.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+	&amp;lt;script src=&amp;quot;test3.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+	&amp;lt;script src=&amp;quot;test.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+
+
+	&amp;lt;script&amp;gt;
+		//8 js code embeded within html code //
+	&amp;lt;/script&amp;gt;
+	&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/ismnoiet/a7cec68124025cc7fac0.js&quot;&gt; &lt;/script&gt;
+
+&lt;h3 id=&quot;csscascading-style-sheet-&quot;&gt;CSS(Cascading Style Sheet) :&lt;/h3&gt;
+&lt;p&gt;A language used to style HTML pages from changing the background color to margins,padding,font size etc.( &lt;a href=&quot;http://google.com&quot;&gt;learn more&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;Here is the snippet of code used to explain CSS and its main functionalities :&lt;/p&gt;
+
+&lt;h3 id=&quot;jsjavascript-or-ecmascript&quot;&gt;JS(JavaScript or ECMAScript):&lt;/h3&gt;
+&lt;p&gt;JavaScript is the language used to handle the front-end of the web,
+meaning that everything related to button clicks, events and animations
+is done through JavaScript.( &lt;a href=&quot;http://google.com&quot;&gt;learn more&lt;/a&gt; )&lt;/p&gt;
+
+&lt;h3 id=&quot;jquery&quot;&gt;JQUERY:&lt;/h3&gt;
+&lt;p&gt;Is the most known DOM manipulating library,it also takes care of 
+browsers incompatibilities.( &lt;a href=&quot;http://google.com&quot;&gt;learn more&lt;/a&gt; )
+### BOOTSTRAP:
+Bootstrap is the number one “css framework” out there, it offers alot of components especially its grid system.( &lt;a href=&quot;http://google.com&quot;&gt;learn more&lt;/a&gt; )
+### PHP:
+A scripting language that runs on the server side(back-end)
+, it is simple and easy to learn.( &lt;a href=&quot;http://google.com&quot;&gt;learn more&lt;/a&gt; )
+### MYSQL:
+Relational Database management System(RDBMS) used simply to store data.( &lt;a href=&quot;http://google.com&quot;&gt;learn more&lt;/a&gt; )&lt;/p&gt;
+</description>
+        <pubDate>Thu, 03 Mar 2016 00:00:00 +0100</pubDate>
+        <link>https://ismnoiet.github.io/trainings/2016/03/03/etic-training-camp-2016-web-part.html</link>
+        <guid isPermaLink="true">https://ismnoiet.github.io/trainings/2016/03/03/etic-training-camp-2016-web-part.html</guid>
+        
+        
+        <category>trainings</category>
+        
+      </item>
     
       <item>
         <title>A must-have list of plugins for sublime text</title>
