@@ -90,7 +90,7 @@ Now let’s start talking about what we’ve done in a nutshell.</p>
 
 <p><img src="https://raw.githubusercontent.com/ismnoiet/ismnoiet.github.io/master/assets/img/theweb.png" alt="the web in a nutshell" />
 #### HTML(Hyper Text Markup Language) :
-HTML is the language used to structure web pages, every single web page is initialy <strong>an HTML page</strong> .( <a href="http://google.com">learn more</a> )</p>
+HTML is the language used to structure web pages, every single web page is initialy <strong>an HTML page</strong> .( <a href="http://www.w3schools.com/html/default.asp">learn more</a> )</p>
 
 <p>Here is the snippet of code used to explain HTML and some  essential tags  used during the training camp:</p>
 <noscript><pre>&lt;!DOCTYPE html&gt;
@@ -197,25 +197,59 @@ HTML is the language used to structure web pages, every single web page is initi
 <script src="https://gist.github.com/ismnoiet/a7cec68124025cc7fac0.js"> </script>
 
 <h3 id="csscascading-style-sheet-">CSS(Cascading Style Sheet) :</h3>
-<p>A language used to style HTML pages from changing the background color to margins,padding,font size etc.( <a href="http://google.com">learn more</a>)</p>
-
-<p>Here is the snippet of code used to explain CSS and its main functionalities :</p>
+<p>A language used to style HTML pages from changing the background color to margins,padding,font size etc.( <a href="http://www.w3schools.com/css/default.asp">learn more</a>)</p>
 
 <h3 id="jsjavascript-or-ecmascript">JS(JavaScript or ECMAScript):</h3>
 <p>JavaScript is the language used to handle the front-end of the web,
 meaning that everything related to button clicks, events and animations
-is done through JavaScript.( <a href="http://google.com">learn more</a> )</p>
+is done through JavaScript.( <a href="http://www.w3schools.com/js/default.asp">learn more</a> )</p>
 
-<h3 id="jquery">JQUERY:</h3>
+<h3 id="jquery">Jquery:</h3>
 <p>Is the most known DOM manipulating library,it also takes care of 
-browsers incompatibilities.( <a href="http://google.com">learn more</a> )
-### BOOTSTRAP:
-Bootstrap is the number one “css framework” out there, it offers alot of components especially its grid system.( <a href="http://google.com">learn more</a> )
-### PHP:
-A scripting language that runs on the server side(back-end)
-, it is simple and easy to learn.( <a href="http://google.com">learn more</a> )
-### MYSQL:
-Relational Database management System(RDBMS) used simply to store data.( <a href="http://google.com">learn more</a> )</p>
+browsers incompatibilities.( <a href="http://www.w3schools.com/jquery/">learn more</a> )</p>
+
+<h3 id="bootstrap">Bootstrap:</h3>
+<p>Bootstrap is the number one “css framework” out there, it offers alot of components especially its grid system.( <a href="http://www.w3schools.com/bootstrap/default.asp">learn more</a> )</p>
+
+<h3 id="php">PHP:</h3>
+<p>A scripting language that runs on the server side(back-end)
+, it is simple and easy to learn.( <a href="http://www.w3schools.com/php/default.asp">learn more</a> )</p>
+
+<h3 id="mysql">MYSQL:</h3>
+<p>Relational Database management System(RDBMS) used simply to store data.( <a href="http://www.w3schools.com/sql/default.asp">learn more</a> )</p>
+
+<h3 id="how-to-connect-mysql-db-with-php-">How to connect mysql DB with PHP ?</h3>
+<p>well, we have many options, therefore we’ve picked the <a href="http://code.tutsplus.com/tutorials/why-you-should-be-using-phps-pdo-for-database-access--net-12059">PDO way</a> which is very simple and straight forward.</p>
+
+<p>Here is a simple script to connect PHP with MYSQL :</p>
+
+<noscript><pre>&lt;?php
+  // Create a pdo instance 
+  $host = &#39;localhost&#39;;
+  $database_name = &#39;databasename&#39;;
+  $username=&#39;username by default it is root&#39;;
+  $password=&#39;the password associated with the current user&#39;;
+  
+  try{
+    // check if there is exception
+    $pdo = new PDO(&quot;mysql:host=$host;dbname=$database_name&quot;,&quot;$username&quot;,&quot;$password&quot;);
+  
+    // now we&#39;ve connected successfully to $database_name database
+    // and we can do whatever we want with it.
+  }
+  catch(PDOException $e){
+    // show a message explaining what is goining wrong.
+    echo $e-&gt;getMessage();
+  }
+ 
+?&gt;</pre></noscript>
+<script src="https://gist.github.com/ismnoiet/33bf2df5bcbefe709654.js"> </script>
+
+<h3 id="finally">Finally</h3>
+<p>Here is the <a href="https://drive.google.com/file/d/0ByTHdG2DjksIaDU1dk9hc0hoMnc/view?usp=sharing">source code</a> of what we’ve done during the training camp,
+once again i want to say <strong>thank you for all the participants</strong> try to modify the source code , play around with it and see what you get, and<br />
+if you have any question please send me an email at <strong>ismnoiet@gmail.com</strong> or through twitter.</p>
+
 
 </div>
 

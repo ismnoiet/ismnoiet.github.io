@@ -6,8 +6,8 @@
 </description>
     <link>https://ismnoiet.github.io/</link>
     <atom:link href="https://ismnoiet.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 05 Mar 2016 00:21:58 +0100</pubDate>
-    <lastBuildDate>Sat, 05 Mar 2016 00:21:58 +0100</lastBuildDate>
+    <pubDate>Sun, 06 Mar 2016 21:26:53 +0100</pubDate>
+    <lastBuildDate>Sun, 06 Mar 2016 21:26:53 +0100</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
     
       <item>
@@ -18,7 +18,7 @@ Now let’s start talking about what we’ve done in a nutshell.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/ismnoiet/ismnoiet.github.io/master/assets/img/theweb.png&quot; alt=&quot;the web in a nutshell&quot; /&gt;
 #### HTML(Hyper Text Markup Language) :
-HTML is the language used to structure web pages, every single web page is initialy &lt;strong&gt;an HTML page&lt;/strong&gt; .( &lt;a href=&quot;http://google.com&quot;&gt;learn more&lt;/a&gt; )&lt;/p&gt;
+HTML is the language used to structure web pages, every single web page is initialy &lt;strong&gt;an HTML page&lt;/strong&gt; .( &lt;a href=&quot;http://www.w3schools.com/html/default.asp&quot;&gt;learn more&lt;/a&gt; )&lt;/p&gt;
 
 &lt;p&gt;Here is the snippet of code used to explain HTML and some  essential tags  used during the training camp:&lt;/p&gt;
 &lt;noscript&gt;&lt;pre&gt;&amp;lt;!DOCTYPE html&amp;gt;
@@ -125,25 +125,59 @@ HTML is the language used to structure web pages, every single web page is initi
 &lt;script src=&quot;https://gist.github.com/ismnoiet/a7cec68124025cc7fac0.js&quot;&gt; &lt;/script&gt;
 
 &lt;h3 id=&quot;csscascading-style-sheet-&quot;&gt;CSS(Cascading Style Sheet) :&lt;/h3&gt;
-&lt;p&gt;A language used to style HTML pages from changing the background color to margins,padding,font size etc.( &lt;a href=&quot;http://google.com&quot;&gt;learn more&lt;/a&gt;)&lt;/p&gt;
-
-&lt;p&gt;Here is the snippet of code used to explain CSS and its main functionalities :&lt;/p&gt;
+&lt;p&gt;A language used to style HTML pages from changing the background color to margins,padding,font size etc.( &lt;a href=&quot;http://www.w3schools.com/css/default.asp&quot;&gt;learn more&lt;/a&gt;)&lt;/p&gt;
 
 &lt;h3 id=&quot;jsjavascript-or-ecmascript&quot;&gt;JS(JavaScript or ECMAScript):&lt;/h3&gt;
 &lt;p&gt;JavaScript is the language used to handle the front-end of the web,
 meaning that everything related to button clicks, events and animations
-is done through JavaScript.( &lt;a href=&quot;http://google.com&quot;&gt;learn more&lt;/a&gt; )&lt;/p&gt;
+is done through JavaScript.( &lt;a href=&quot;http://www.w3schools.com/js/default.asp&quot;&gt;learn more&lt;/a&gt; )&lt;/p&gt;
 
-&lt;h3 id=&quot;jquery&quot;&gt;JQUERY:&lt;/h3&gt;
+&lt;h3 id=&quot;jquery&quot;&gt;Jquery:&lt;/h3&gt;
 &lt;p&gt;Is the most known DOM manipulating library,it also takes care of 
-browsers incompatibilities.( &lt;a href=&quot;http://google.com&quot;&gt;learn more&lt;/a&gt; )
-### BOOTSTRAP:
-Bootstrap is the number one “css framework” out there, it offers alot of components especially its grid system.( &lt;a href=&quot;http://google.com&quot;&gt;learn more&lt;/a&gt; )
-### PHP:
-A scripting language that runs on the server side(back-end)
-, it is simple and easy to learn.( &lt;a href=&quot;http://google.com&quot;&gt;learn more&lt;/a&gt; )
-### MYSQL:
-Relational Database management System(RDBMS) used simply to store data.( &lt;a href=&quot;http://google.com&quot;&gt;learn more&lt;/a&gt; )&lt;/p&gt;
+browsers incompatibilities.( &lt;a href=&quot;http://www.w3schools.com/jquery/&quot;&gt;learn more&lt;/a&gt; )&lt;/p&gt;
+
+&lt;h3 id=&quot;bootstrap&quot;&gt;Bootstrap:&lt;/h3&gt;
+&lt;p&gt;Bootstrap is the number one “css framework” out there, it offers alot of components especially its grid system.( &lt;a href=&quot;http://www.w3schools.com/bootstrap/default.asp&quot;&gt;learn more&lt;/a&gt; )&lt;/p&gt;
+
+&lt;h3 id=&quot;php&quot;&gt;PHP:&lt;/h3&gt;
+&lt;p&gt;A scripting language that runs on the server side(back-end)
+, it is simple and easy to learn.( &lt;a href=&quot;http://www.w3schools.com/php/default.asp&quot;&gt;learn more&lt;/a&gt; )&lt;/p&gt;
+
+&lt;h3 id=&quot;mysql&quot;&gt;MYSQL:&lt;/h3&gt;
+&lt;p&gt;Relational Database management System(RDBMS) used simply to store data.( &lt;a href=&quot;http://www.w3schools.com/sql/default.asp&quot;&gt;learn more&lt;/a&gt; )&lt;/p&gt;
+
+&lt;h3 id=&quot;how-to-connect-mysql-db-with-php-&quot;&gt;How to connect mysql DB with PHP ?&lt;/h3&gt;
+&lt;p&gt;well, we have many options, therefore we’ve picked the &lt;a href=&quot;http://code.tutsplus.com/tutorials/why-you-should-be-using-phps-pdo-for-database-access--net-12059&quot;&gt;PDO way&lt;/a&gt; which is very simple and straight forward.&lt;/p&gt;
+
+&lt;p&gt;Here is a simple script to connect PHP with MYSQL :&lt;/p&gt;
+
+&lt;noscript&gt;&lt;pre&gt;&amp;lt;?php
+  // Create a pdo instance 
+  $host = &amp;#39;localhost&amp;#39;;
+  $database_name = &amp;#39;databasename&amp;#39;;
+  $username=&amp;#39;username by default it is root&amp;#39;;
+  $password=&amp;#39;the password associated with the current user&amp;#39;;
+  
+  try{
+    // check if there is exception
+    $pdo = new PDO(&amp;quot;mysql:host=$host;dbname=$database_name&amp;quot;,&amp;quot;$username&amp;quot;,&amp;quot;$password&amp;quot;);
+  
+    // now we&amp;#39;ve connected successfully to $database_name database
+    // and we can do whatever we want with it.
+  }
+  catch(PDOException $e){
+    // show a message explaining what is goining wrong.
+    echo $e-&amp;gt;getMessage();
+  }
+ 
+?&amp;gt;&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/ismnoiet/33bf2df5bcbefe709654.js&quot;&gt; &lt;/script&gt;
+
+&lt;h3 id=&quot;finally&quot;&gt;Finally&lt;/h3&gt;
+&lt;p&gt;Here is the &lt;a href=&quot;https://drive.google.com/file/d/0ByTHdG2DjksIaDU1dk9hc0hoMnc/view?usp=sharing&quot;&gt;source code&lt;/a&gt; of what we’ve done during the training camp,
+once again i want to say &lt;strong&gt;thank you for all the participants&lt;/strong&gt; try to modify the source code , play around with it and see what you get, and&lt;br /&gt;
+if you have any question please send me an email at &lt;strong&gt;ismnoiet@gmail.com&lt;/strong&gt; or through twitter.&lt;/p&gt;
+
 </description>
         <pubDate>Thu, 03 Mar 2016 00:00:00 +0100</pubDate>
         <link>https://ismnoiet.github.io/trainings/2016/03/03/etic-training-camp-2016-web-part.html</link>
