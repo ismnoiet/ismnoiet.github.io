@@ -1,12 +1,18 @@
 ---
-  layout: post
-  title: A must-have list of plugins for sublime text
-  comments: true
-  tags: 
-  categories: 
-    - tools
+layout: post
+title: A Must-have List Of Plugins For Sublime Text
+tags: sublime-text editor code plugins 
+categories: tools
 ---
-Sublime text, is one of the most if not the most flexible hackable code editor, available for all OS with a huge list of plugins to make it even better.
+
+* content
+{:toc}
+
+Sublime text is one of the most if not the most flexible hackable code editor, available for all OS with a huge list of plugins to make it even better.
+
+
+
+
 
 In this article, we’ll be talking about the indispensable plugins that you need to install if you want to gain a huge amount of time when using sublime text , without too much talking let’s get directly to the list.
 
@@ -45,5 +51,5 @@ Those plugins are pretty convenient when it comes to picking and choosing colors
 * [Case Convertion](https://github.com/jdc0589/CaseConversion) : An awesome plugin to convert strings and switch  cases from camel case to snake case to whatever case you want.
 
 
-*Note* :
+**Note :** 
 This article was originally published on [medium](https://medium.com/@hamism/a-must-have-list-of-plugins-for-sublime-text-a54e865ee26#.lqgrumnxd)

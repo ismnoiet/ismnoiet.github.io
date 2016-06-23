@@ -2,17 +2,138 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hamza</title>
-    <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
-</description>
+    <description></description>
     <link>https://ismnoiet.github.io/</link>
     <atom:link href="https://ismnoiet.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 11 Apr 2016 23:41:45 +0100</pubDate>
-    <lastBuildDate>Mon, 11 Apr 2016 23:41:45 +0100</lastBuildDate>
+    <pubDate>Thu, 23 Jun 2016 19:55:18 +0100</pubDate>
+    <lastBuildDate>Thu, 23 Jun 2016 19:55:18 +0100</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
     
       <item>
+        <title>Introduction To Rollup.js</title>
+        <description>
+&lt;p&gt;&lt;a href=&quot;http://&quot;&gt;Rollup.js&lt;/a&gt; 
+is the next generation module bundler as we can read from 
+their official website.
+which means we can write next generation modules(es6 modules) and then use rollup to bundle(concatenate) them in a single file.&lt;/p&gt;
+
+&lt;p&gt;First of all, we must install rollup globally to make the &lt;code class=&quot;highlighter-rouge&quot;&gt;rollup&lt;/code&gt; command availabe in the command line, here is the snippet to install it : 
+&lt;code class=&quot;highlighter-rouge&quot;&gt;
+npm install -g rollup
+&lt;/code&gt;
+&lt;strong&gt;Note :&lt;/strong&gt; in some computers we need to be an administrator
+in order to install node global modules in this case just 
+proceed the previous command with a leading &lt;code class=&quot;highlighter-rouge&quot;&gt;sudo&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;After installing rollup, we can try to use it for the following simple example :&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cm&quot;&gt;/* src/UsersCollection.js  */&lt;/span&gt;
+
+&lt;span class=&quot;kr&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;UsersCollection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;nx&quot;&gt;constructor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;users&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]){&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;users&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;users&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+	
+	&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+		&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;users&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;kr&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;UsersCollection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;cm&quot;&gt;/* src/main.js will import UsersCollection and use it for its need. */&lt;/span&gt;
+&lt;span class=&quot;cm&quot;&gt;/* src/main.js */&lt;/span&gt;
+
+&lt;span class=&quot;kr&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;UsersCollection&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;./UsersCollection&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;usersCollection&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;UsersCollection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;user1&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;user2&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;usersCollection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;If we run : 
+&lt;code class=&quot;highlighter-rouge&quot;&gt;
+rollup src/main.js 
+&lt;/code&gt;
+the needed parts of code from &lt;code class=&quot;highlighter-rouge&quot;&gt;UsersCollection.js&lt;/code&gt; will be added to &lt;code class=&quot;highlighter-rouge&quot;&gt;main.js&lt;/code&gt; and the bundle file will be printed out
+to the terminal, without being stored persistently in an output file. &lt;br /&gt;
+If we want to store the output content to a file we can use this command :
+&lt;code class=&quot;highlighter-rouge&quot;&gt;
+rollup src/main.js &amp;gt; bundle.js
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;That is nice,                                                                                                 &lt;br /&gt;
+but what if  we want some sort of configuration file like &lt;code class=&quot;highlighter-rouge&quot;&gt;webpack.config.js&lt;/code&gt; for webpack if we are familiar with it, so we don’t have to type everytime the destination file. &lt;br /&gt;
+Well, rollup has an answer for that, just create &lt;code class=&quot;highlighter-rouge&quot;&gt;rollup.config.js&lt;/code&gt; file in the root of our project and when calling the rollup command add &lt;code class=&quot;highlighter-rouge&quot;&gt;-c&lt;/code&gt; flag which means hi rollup i have a configuration file please consider it. &lt;br /&gt;
+Here is the command that we will use :&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rollup src/main.js -c  
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;At this moment &lt;code class=&quot;highlighter-rouge&quot;&gt;rollup.config.js&lt;/code&gt; file is empty and does nothing, so we need to add some configuration, here is a snippet of minimal configuration :&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// rollup.config.js&lt;/span&gt;
+&lt;span class=&quot;kr&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;entry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;src/main.js&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  
+  &lt;span class=&quot;na&quot;&gt;dest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;dist/bundle.js&#39;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// equivalent to --output or &amp;gt; bundle.js&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;entry :&lt;/strong&gt; a property to specify the source files.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;dest :&lt;/strong&gt; a property to specify the destination file.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Now everything is good,
+but we still have one issue, the generated output is es6 code and till this moment, not all browsers fully support es6(although &lt;a href=&quot;https://www.mozilla.org/en-US/firefox/developer/&quot;&gt;Firefox Developer&lt;/a&gt; and &lt;a href=&quot;https://www.google.fr/chrome/browser/canary.html&quot;&gt;Chrome Canary&lt;/a&gt; do to some extent), therefore for prodcution code we need somekind of midlle man to convert the code to es5 that all browsers understand.&lt;/p&gt;
+
+&lt;p&gt;For this job i can mention two tools that can be used with rollup, &lt;a href=&quot;https://www.npmjs.com/package/rollup-plugin-buble&quot;&gt;buble&lt;/a&gt; and &lt;a href=&quot;https://www.npmjs.com/package/rollup-plugin-babel&quot;&gt;babel plugin&lt;/a&gt;, may be there are others but i think these two options are fine, just pick one of them.&lt;/p&gt;
+
+&lt;p&gt;In this article i picked &lt;a href=&quot;https://www.npmjs.com/package/rollup-plugin-buble&quot;&gt;buble&lt;/a&gt;, it is simple to use and we don’t need to install &lt;a href=&quot;https://www.npmjs.com/package/babel-preset-es2015-rollup&quot;&gt;babel-preset-es2015-rollup&lt;/a&gt;.
+Use this command to save buble to our dev dependencies :&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm install rollup-plugin-buble --save-dev
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Now, import buble in &lt;code class=&quot;highlighter-rouge&quot;&gt;rollup.config.js&lt;/code&gt; file and add &lt;code class=&quot;highlighter-rouge&quot;&gt;plugins&lt;/code&gt; property, so we end up with this :&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// import buble&lt;/span&gt;
+&lt;span class=&quot;kr&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;buble&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;rollup-plugin-buble&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kr&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;entry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;src/main.js&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  
+  &lt;span class=&quot;na&quot;&gt;dest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;dist/bundle.js&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// equivalent to --output or &amp;gt; bundle.js&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;plugins&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;buble&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()]&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// plugins property to specify plugins to use,&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Finally&lt;/strong&gt; rerun &lt;code class=&quot;highlighter-rouge&quot;&gt;buble src/main.js -c&lt;/code&gt; command, and we should get a bundle file &lt;code class=&quot;highlighter-rouge&quot;&gt;dist/bundle.js&lt;/code&gt; containing es5 code that all browsers understand.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 10 Jun 2016 00:00:00 +0100</pubDate>
+        <link>https://ismnoiet.github.io/2016/06/10/Introduction-to-rollup/</link>
+        <guid isPermaLink="true">https://ismnoiet.github.io/2016/06/10/Introduction-to-rollup/</guid>
+        
+        <category>javascript</category>
+        
+        <category>module</category>
+        
+        <category>bundler</category>
+        
+        <category>es6</category>
+        
+        <category>rollup.js</category>
+        
+        
+        <category>JavaScript</category>
+        
+      </item>
+    
+      <item>
         <title>Be Thankful</title>
-        <description>&lt;p&gt;You are alive and you can read this, &lt;strong&gt;be thankful&lt;/strong&gt;, there is a lot of dead forgotten people out there.&lt;/p&gt;
+        <description>
+&lt;p&gt;You are alive and you can read this, &lt;strong&gt;be thankful&lt;/strong&gt;, there is a lot of dead forgotten people out there.&lt;/p&gt;
 
 &lt;p&gt;You can think and distinguish between the bad and the good, you are not fool, 
 &lt;strong&gt;be thankful&lt;/strong&gt;.&lt;/p&gt;
@@ -41,195 +162,24 @@ think about the things you have and others don’t, &lt;strong&gt;be thankful&lt
 &lt;p&gt;&lt;strong&gt;Thanks for you time and hope you find it a gentle reminder&lt;/strong&gt;.&lt;/p&gt;
 </description>
         <pubDate>Mon, 11 Apr 2016 00:00:00 +0100</pubDate>
-        <link>https://ismnoiet.github.io/life/2016/04/11/be-thankful.html</link>
-        <guid isPermaLink="true">https://ismnoiet.github.io/life/2016/04/11/be-thankful.html</guid>
+        <link>https://ismnoiet.github.io/2016/04/11/be-thankful/</link>
+        <guid isPermaLink="true">https://ismnoiet.github.io/2016/04/11/be-thankful/</guid>
+        
+        <category>inspiration</category>
+        
+        <category>human</category>
+        
+        <category>thoughts</category>
         
         
-        <category>life</category>
-        
-      </item>
-    
-      <item>
-        <title>Etic Training Camp 2016 &quot;Web Part&quot;</title>
-        <description>&lt;h3 id=&quot;introduction&quot;&gt;Introduction&lt;/h3&gt;
-&lt;p&gt;First of all i want to say &lt;strong&gt;Thank you&lt;/strong&gt; for &lt;strong&gt;etic club&lt;/strong&gt; for organizing such a great event, it was really an interesting training camp, without forgetting the team that was under my belt you were a nice team and i enjoyed working with every one of you.
-Now let’s start talking about what we’ve done in a nutshell.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/ismnoiet/ismnoiet.github.io/master/assets/img/theweb.png&quot; alt=&quot;the web in a nutshell&quot; /&gt;
-#### HTML(Hyper Text Markup Language) :
-HTML is the language used to structure web pages, every single web page is initialy &lt;strong&gt;an HTML page&lt;/strong&gt; .( &lt;a href=&quot;http://www.w3schools.com/html/default.asp&quot;&gt;learn more&lt;/a&gt; )&lt;/p&gt;
-
-&lt;p&gt;Here is the snippet of code used to explain HTML and some  essential tags  used during the training camp:&lt;/p&gt;
-&lt;noscript&gt;&lt;pre&gt;&amp;lt;!DOCTYPE html&amp;gt;
-&amp;lt;html&amp;gt;
-&amp;lt;head&amp;gt;
-	&amp;lt;title&amp;gt;training camp etic 2016&amp;lt;/title&amp;gt;
-	&amp;lt;!-- inlude style file  --&amp;gt;
-	&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; type=&amp;quot;text/css&amp;quot; href=&amp;quot;style.css&amp;quot;&amp;gt;
-
-
-&amp;lt;/head&amp;gt;
-&amp;lt;body&amp;gt;
-	&amp;lt;script src=&amp;quot;test.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
-
- 	&amp;lt;!--1 headers 	 --&amp;gt;
- 	&amp;lt;h1 style=&amp;quot;color:red&amp;quot;&amp;gt;h1&amp;lt;/h1&amp;gt;
- 	&amp;lt;!--embed js code whting html--&amp;gt;
- 	&amp;lt;h2 onclick=&amp;quot;alert(&amp;#39;hello&amp;#39;);&amp;quot;&amp;gt;h2&amp;lt;/h2&amp;gt;
- 	&amp;lt;h3&amp;gt;h3&amp;lt;/h3&amp;gt;
- 	&amp;lt;h4&amp;gt;h4&amp;lt;/h4&amp;gt;
- 	&amp;lt;h5&amp;gt;h5&amp;lt;/h5&amp;gt;
- 	&amp;lt;h6&amp;gt;h6&amp;lt;/h6&amp;gt;
-
-	&amp;lt;!--2 paragraphs  --&amp;gt;
- 	&amp;lt;p id=&amp;quot;p1&amp;quot; class=&amp;quot;p1&amp;quot;&amp;gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, voluptate?&amp;lt;/p&amp;gt;
-
- 	&amp;lt;!--3 include images	 --&amp;gt;
-	&amp;lt;img src=&amp;quot;test.png&amp;quot;&amp;gt;
-		
-	&amp;lt;div&amp;gt;&amp;lt;/div&amp;gt;	
-	
-	
-	&amp;lt;!--4 lists --&amp;gt;
-	&amp;lt;!-- unordered lists --&amp;gt;
-	&amp;lt;ul&amp;gt;
-		&amp;lt;li&amp;gt;item1&amp;lt;/li&amp;gt;
-		&amp;lt;li&amp;gt;item2&amp;lt;/li&amp;gt;
-		&amp;lt;li&amp;gt;item3&amp;lt;/li&amp;gt;
-	&amp;lt;/ul&amp;gt;	
-
-	&amp;lt;!-- ordered lists --&amp;gt;
-	&amp;lt;ol&amp;gt;
-		&amp;lt;li&amp;gt;item1&amp;lt;/li&amp;gt;
-		&amp;lt;li&amp;gt;item2&amp;lt;/li&amp;gt;
-		&amp;lt;li&amp;gt;item3&amp;lt;/li&amp;gt;		
-	&amp;lt;/ol&amp;gt;
-
-	&amp;lt;!--5 tables	 --&amp;gt;
-	&amp;lt;table&amp;gt;
-		&amp;lt;thead&amp;gt;
-			&amp;lt;tr&amp;gt;
-				&amp;lt;th&amp;gt;item1&amp;lt;/th&amp;gt;
-				&amp;lt;th&amp;gt;item2&amp;lt;/th&amp;gt;
-			&amp;lt;/tr&amp;gt;
-		&amp;lt;/thead&amp;gt;
-		&amp;lt;tbody&amp;gt;
-			&amp;lt;tr&amp;gt;
-				&amp;lt;td&amp;gt;item1&amp;lt;/td&amp;gt;
-				&amp;lt;td&amp;gt;item2&amp;lt;/td&amp;gt;
-			&amp;lt;/tr&amp;gt;&amp;lt;tr&amp;gt;
-				&amp;lt;td&amp;gt;item1&amp;lt;/td&amp;gt;
-				&amp;lt;td&amp;gt;item2&amp;lt;/td&amp;gt;
-			&amp;lt;/tr&amp;gt;&amp;lt;tr&amp;gt;
-				&amp;lt;td&amp;gt;item1&amp;lt;/td&amp;gt;
-				&amp;lt;td&amp;gt;item2&amp;lt;/td&amp;gt;
-			&amp;lt;/tr&amp;gt;&amp;lt;tr&amp;gt;
-				&amp;lt;td&amp;gt;item1&amp;lt;/td&amp;gt;
-				&amp;lt;td&amp;gt;item2&amp;lt;/td&amp;gt;
-			&amp;lt;/tr&amp;gt;
-		&amp;lt;/tbody&amp;gt;
-	&amp;lt;/table&amp;gt;
-	
-	&amp;lt;!--6 html5 new tags  --&amp;gt;
-	&amp;lt;header&amp;gt;&amp;lt;/header&amp;gt;
-	&amp;lt;footer&amp;gt;&amp;lt;/footer&amp;gt;
-	&amp;lt;aside&amp;gt;&amp;lt;/aside&amp;gt;
-	&amp;lt;nav&amp;gt;&amp;lt;/nav&amp;gt;
-	&amp;lt;section&amp;gt;&amp;lt;/section&amp;gt;	
-	&amp;lt;!-- .... --&amp;gt;
-	
-
-	&amp;lt;div class=&amp;quot;p1&amp;quot;&amp;gt;
-		my name is &amp;lt;span&amp;gt;hamza&amp;lt;/span&amp;gt;
-		my name is &amp;lt;span&amp;gt;blabla&amp;lt;/span&amp;gt;
-	&amp;lt;/div&amp;gt;
-
-	&amp;lt;div class=&amp;quot;p1&amp;quot;&amp;gt;		
-		&amp;lt;div&amp;gt;
-			&amp;lt;span&amp;gt;skdfjkdjf&amp;lt;/span&amp;gt;
-		&amp;lt;/div&amp;gt;
-	&amp;lt;/div&amp;gt;
-
-	&amp;lt;!--7 include js  --&amp;gt;
-	&amp;lt;script src=&amp;quot;test2.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
-	&amp;lt;script src=&amp;quot;test3.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
-	&amp;lt;script src=&amp;quot;test.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
-
-
-	&amp;lt;script&amp;gt;
-		//8 js code embeded within html code //
-	&amp;lt;/script&amp;gt;
-	&amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt;&lt;/pre&gt;&lt;/noscript&gt;
-&lt;script src=&quot;https://gist.github.com/ismnoiet/a7cec68124025cc7fac0.js&quot;&gt; &lt;/script&gt;
-
-&lt;h3 id=&quot;csscascading-style-sheet-&quot;&gt;CSS(Cascading Style Sheet) :&lt;/h3&gt;
-&lt;p&gt;A language used to style HTML pages from changing the background color to margins,padding,font size etc.( &lt;a href=&quot;http://www.w3schools.com/css/default.asp&quot;&gt;learn more&lt;/a&gt;)&lt;/p&gt;
-
-&lt;h3 id=&quot;jsjavascript-or-ecmascript&quot;&gt;JS(JavaScript or ECMAScript):&lt;/h3&gt;
-&lt;p&gt;JavaScript is the language used to handle the front-end of the web,
-meaning that everything related to button clicks, events and animations
-is done through JavaScript.( &lt;a href=&quot;http://www.w3schools.com/js/default.asp&quot;&gt;learn more&lt;/a&gt; )&lt;/p&gt;
-
-&lt;h3 id=&quot;jquery&quot;&gt;Jquery:&lt;/h3&gt;
-&lt;p&gt;Is the most known DOM manipulating library,it also takes care of 
-browsers incompatibilities.( &lt;a href=&quot;http://www.w3schools.com/jquery/&quot;&gt;learn more&lt;/a&gt; )&lt;/p&gt;
-
-&lt;h3 id=&quot;bootstrap&quot;&gt;Bootstrap:&lt;/h3&gt;
-&lt;p&gt;Bootstrap is the number one “css framework” out there, it offers alot of components especially its grid system.( &lt;a href=&quot;http://www.w3schools.com/bootstrap/default.asp&quot;&gt;learn more&lt;/a&gt; )&lt;/p&gt;
-
-&lt;h3 id=&quot;php&quot;&gt;PHP:&lt;/h3&gt;
-&lt;p&gt;A scripting language that runs on the server side(back-end)
-, it is simple and easy to learn.( &lt;a href=&quot;http://www.w3schools.com/php/default.asp&quot;&gt;learn more&lt;/a&gt; )&lt;/p&gt;
-
-&lt;h3 id=&quot;mysql&quot;&gt;MYSQL:&lt;/h3&gt;
-&lt;p&gt;Relational Database management System(RDBMS) used simply to store data.( &lt;a href=&quot;http://www.w3schools.com/sql/default.asp&quot;&gt;learn more&lt;/a&gt; )&lt;/p&gt;
-
-&lt;h3 id=&quot;how-to-connect-mysql-db-with-php-&quot;&gt;How to connect mysql DB with PHP ?&lt;/h3&gt;
-&lt;p&gt;well, we have many options, therefore we’ve picked the &lt;a href=&quot;http://code.tutsplus.com/tutorials/why-you-should-be-using-phps-pdo-for-database-access--net-12059&quot;&gt;PDO way&lt;/a&gt; which is very simple and straight forward.&lt;/p&gt;
-
-&lt;p&gt;Here is a simple script to connect PHP with MYSQL :&lt;/p&gt;
-
-&lt;noscript&gt;&lt;pre&gt;&amp;lt;?php
-  // Create a pdo instance 
-  $host = &amp;#39;localhost&amp;#39;;
-  $database_name = &amp;#39;databasename&amp;#39;;
-  $username=&amp;#39;username by default it is root&amp;#39;;
-  $password=&amp;#39;the password associated with the current user&amp;#39;;
-  
-  try{
-    // check if there is exception
-    $pdo = new PDO(&amp;quot;mysql:host=$host;dbname=$database_name&amp;quot;,&amp;quot;$username&amp;quot;,&amp;quot;$password&amp;quot;);
-  
-    // now we&amp;#39;ve connected successfully to $database_name database
-    // and we can do whatever we want with it.
-  }
-  catch(PDOException $e){
-    // show a message explaining what is goining wrong.
-    echo $e-&amp;gt;getMessage();
-  }
- 
-?&amp;gt;&lt;/pre&gt;&lt;/noscript&gt;
-&lt;script src=&quot;https://gist.github.com/ismnoiet/33bf2df5bcbefe709654.js&quot;&gt; &lt;/script&gt;
-
-&lt;h3 id=&quot;finally&quot;&gt;Finally&lt;/h3&gt;
-&lt;p&gt;Here is the &lt;a href=&quot;https://drive.google.com/file/d/0ByTHdG2DjksIaDU1dk9hc0hoMnc/view?usp=sharing&quot;&gt;source code&lt;/a&gt; of what we’ve done during the training camp,
-once again i want to say &lt;strong&gt;thank you for all the participants&lt;/strong&gt; try to modify the source code , play around with it and see what you get, and&lt;br /&gt;
-if you have any question please send me an email at &lt;strong&gt;ismnoiet@gmail.com&lt;/strong&gt; or through twitter.&lt;/p&gt;
-
-</description>
-        <pubDate>Thu, 03 Mar 2016 00:00:00 +0100</pubDate>
-        <link>https://ismnoiet.github.io/trainings/2016/03/03/etic-training-camp-2016-web-part.html</link>
-        <guid isPermaLink="true">https://ismnoiet.github.io/trainings/2016/03/03/etic-training-camp-2016-web-part.html</guid>
-        
-        
-        <category>trainings</category>
+        <category>human</category>
         
       </item>
     
       <item>
-        <title>A must-have list of plugins for sublime text</title>
-        <description>&lt;p&gt;Sublime text, is one of the most if not the most flexible hackable code editor, available for all OS with a huge list of plugins to make it even better.&lt;/p&gt;
+        <title>A Must-have List Of Plugins For Sublime Text</title>
+        <description>
+&lt;p&gt;Sublime text is one of the most if not the most flexible hackable code editor, available for all OS with a huge list of plugins to make it even better.&lt;/p&gt;
 
 &lt;p&gt;In this article, we’ll be talking about the indispensable plugins that you need to install if you want to gain a huge amount of time when using sublime text , without too much talking let’s get directly to the list.&lt;/p&gt;
 
@@ -284,12 +234,20 @@ if you have any question please send me an email at &lt;strong&gt;ismnoiet@gmail
   &lt;li&gt;&lt;a href=&quot;https://github.com/jdc0589/CaseConversion&quot;&gt;Case Convertion&lt;/a&gt; : An awesome plugin to convert strings and switch  cases from camel case to snake case to whatever case you want.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;em&gt;Note&lt;/em&gt; :
+&lt;p&gt;&lt;strong&gt;Note :&lt;/strong&gt; 
 This article was originally published on &lt;a href=&quot;https://medium.com/@hamism/a-must-have-list-of-plugins-for-sublime-text-a54e865ee26#.lqgrumnxd&quot;&gt;medium&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Wed, 24 Feb 2016 00:00:00 +0100</pubDate>
-        <link>https://ismnoiet.github.io/tools/2016/02/24/A-must-have-list-of-plugins-for-sublime-text.html</link>
-        <guid isPermaLink="true">https://ismnoiet.github.io/tools/2016/02/24/A-must-have-list-of-plugins-for-sublime-text.html</guid>
+        <link>https://ismnoiet.github.io/2016/02/24/A-must-have-list-of-plugins-for-sublime-text/</link>
+        <guid isPermaLink="true">https://ismnoiet.github.io/2016/02/24/A-must-have-list-of-plugins-for-sublime-text/</guid>
+        
+        <category>sublime-text</category>
+        
+        <category>editor</category>
+        
+        <category>code</category>
+        
+        <category>plugins</category>
         
         
         <category>tools</category>

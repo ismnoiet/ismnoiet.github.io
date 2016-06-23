@@ -1,13 +1,19 @@
 ---
   layout: post
   title: Be Thankful 
-  tags: 
-  categories: 
-    - life
+  tags: inspiration human thoughts 
+  categories: human 
 ---
 
+* content
+{:toc}
 
 You are alive and you can read this, **be thankful**, there is a lot of dead forgotten people out there.
+
+
+
+
+
 
 You can think and distinguish between the bad and the good, you are not fool, 
 **be thankful**.

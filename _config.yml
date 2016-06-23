@@ -1,24 +1,48 @@
-# Site settings
-title: Hamza
-description: >
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
 
-baseurl: "" # the subpath of your site, e.g. /blog/
+# Site settings
+title: Hamza 
+brief-intro: Software Developer
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://ismnoiet.github.io" # the base hostname & protocol for your site
 
-author:
-  fullname: Hamza 
-  googleplus: https://plus.google.com/u/0/+hamisml 
-  github: ismnoiet
-  twitter: ham_ism
-  gplus: hamisml
-  disqus: ismnoiet-github-blog 
-  # disqus: your_disqus_username
-# google_analytics: 'UA-XXXXXXXX-X'
+permalink: /:year/:month/:day/:title/
 
-gems:
-  - jekyll-gist 
+# other links
+twitter_username: ham_ism 
+github_username: ismnoiet 
+email: ismnoiet@gmail.com
+
+description_footer: Be Thankful Over Few God Makes You Happy Over Many 
+
+# comments
+# replace my disqus username with yours.
+disqus_shortname: ismnoiet-github-blog 
+
+# google_analytics_id: UA-72449510-4 # google 分析追踪id
+
 # Build settings
 markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# port
+# port: 1234
+
+# url
+category_dir: category/
+tag_dir: tag/
+
+# excerpt
+excerpt_separator: "\n\n\n\n"
+
+# paginate
+gems: [jekyll-paginate]
+paginate: 5
