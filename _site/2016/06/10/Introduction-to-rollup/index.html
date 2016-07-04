@@ -164,15 +164,16 @@ is the next generation module bundler as we can read from
 their official website.
 which means we can write next generation modules(es6 modules) and then use rollup to bundle(concatenate) them in a single file.</p>
 
-<p>First of all, we must install rollup globally to make the <code class="highlighter-rouge">rollup</code> command availabe in the command line, here is the snippet to install it : 
-<code class="highlighter-rouge">
-npm install -g rollup
-</code>
-<strong>Note :</strong> in some computers we need to be an administrator
+<p>The first thing to do obviously is to install rollup, for this article i choosed to install it globally, so the <code class="highlighter-rouge">rollup</code> command availabe in the command line, here is the snippet to install it:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>npm install -g rollup
+</code></pre>
+</div>
+<p><strong>Note :</strong> in some computers we need to be an administrator
 in order to install node global modules in this case just 
 proceed the previous command with a leading <code class="highlighter-rouge">sudo</code>.</p>
 
-<p>After installing rollup, we can try to use it for the following simple example :</p>
+<p>After installing rollup, we can try to use it with the following simple example :</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="cm">/* src/UsersCollection.js  */</span>
 
@@ -197,16 +198,18 @@ proceed the previous command with a leading <code class="highlighter-rouge">sudo
 </code></pre>
 </div>
 
-<p>If we run : 
-<code class="highlighter-rouge">
-rollup src/main.js 
-</code>
-the needed parts of code from <code class="highlighter-rouge">UsersCollection.js</code> will be added to <code class="highlighter-rouge">main.js</code> and the bundle file will be printed out
+<p>If we run :</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>rollup src/main.js 
+</code></pre>
+</div>
+<p>the needed parts of code from <code class="highlighter-rouge">UsersCollection.js</code> will be added to <code class="highlighter-rouge">main.js</code> and the bundle file will be printed out
 to the terminal, without being stored persistently in an output file. <br />
-If we want to store the output content to a file we can use this command :
-<code class="highlighter-rouge">
-rollup src/main.js &gt; bundle.js
-</code></p>
+If we want to store the output content to a file we can use this command :</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>rollup src/main.js &gt; bundle.js
+</code></pre>
+</div>
 
 <p>That is nice,                                                                                                 <br />
 but what if  we want some sort of configuration file like <code class="highlighter-rouge">webpack.config.js</code> for webpack if we are familiar with it, so we don’t have to type everytime the destination file. <br />
@@ -237,7 +240,7 @@ but we still have one issue, the generated output is es6 code and till this mome
 
 <p>For this job i can mention two tools that can be used with rollup, <a href="https://www.npmjs.com/package/rollup-plugin-buble">buble</a> and <a href="https://www.npmjs.com/package/rollup-plugin-babel">babel plugin</a>, may be there are others but i think these two options are fine, just pick one of them.</p>
 
-<p>In this article i picked <a href="https://www.npmjs.com/package/rollup-plugin-buble">buble</a>, it is simple to use and we don’t need to install <a href="https://www.npmjs.com/package/babel-preset-es2015-rollup">babel-preset-es2015-rollup</a>.
+<p>In this article i picked <a href="https://www.npmjs.com/package/rollup-plugin-buble">buble</a>, it is simple to use and we don’t need to install <a href="https://www.npmjs.com/package/babel-preset-es2015-rollup">babel-preset-es2015-rollup</a>. <br />
 Use this command to save buble to our dev dependencies :</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>npm install rollup-plugin-buble --save-dev
@@ -248,10 +251,11 @@ Use this command to save buble to our dev dependencies :</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="c1">// import buble</span>
 <span class="kr">import</span> <span class="nx">buble</span> <span class="nx">from</span> <span class="s1">'rollup-plugin-buble'</span><span class="p">;</span>
+
 <span class="kr">export</span> <span class="k">default</span> <span class="p">{</span>
   <span class="na">entry</span><span class="p">:</span> <span class="s1">'src/main.js'</span><span class="p">,</span>  
   <span class="na">dest</span><span class="p">:</span> <span class="s1">'dist/bundle.js'</span><span class="p">,</span> <span class="c1">// equivalent to --output or &gt; bundle.js</span>
-  <span class="na">plugins</span><span class="p">:[</span><span class="nx">buble</span><span class="p">()]</span>  <span class="c1">// plugins property to specify plugins to use,</span>
+  <span class="na">plugins</span><span class="p">:[</span><span class="nx">buble</span><span class="p">()]</span>  <span class="c1">// plugins property to specify plugins to use.</span>
 <span class="p">};</span>
 </code></pre>
 </div>

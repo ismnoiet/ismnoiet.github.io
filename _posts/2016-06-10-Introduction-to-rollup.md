@@ -17,7 +17,8 @@ which means we can write next generation modules(es6 modules) and then use rollu
 
 
 
-First of all, we must install rollup globally to make the ``rollup`` command availabe in the command line, here is the snippet to install it : 
+The first thing to do obviously is to install rollup, for this article i choosed to install it globally, so the ``rollup`` command availabe in the command line, here is the snippet to install it:
+
 ```
 npm install -g rollup
 ```
@@ -26,7 +27,7 @@ in order to install node global modules in this case just
 proceed the previous command with a leading ``sudo``.
 
 
-After installing rollup, we can try to use it for the following simple example : 
+After installing rollup, we can try to use it with the following simple example : 
 
 ```javascript
 /* src/UsersCollection.js  */
@@ -52,12 +53,14 @@ usersCollection.log();
 ```
 
 If we run : 
+
 ```
 rollup src/main.js 
 ```
 the needed parts of code from ``UsersCollection.js`` will be added to ``main.js`` and the bundle file will be printed out
 to the terminal, without being stored persistently in an output file.   
 If we want to store the output content to a file we can use this command :
+
 ```
 rollup src/main.js > bundle.js
 ```
@@ -89,7 +92,7 @@ but we still have one issue, the generated output is es6 code and till this mome
 
 For this job i can mention two tools that can be used with rollup, [buble](https://www.npmjs.com/package/rollup-plugin-buble) and [babel plugin](https://www.npmjs.com/package/rollup-plugin-babel), may be there are others but i think these two options are fine, just pick one of them.
 
-In this article i picked [buble](https://www.npmjs.com/package/rollup-plugin-buble), it is simple to use and we don't need to install [babel-preset-es2015-rollup](https://www.npmjs.com/package/babel-preset-es2015-rollup).
+In this article i picked [buble](https://www.npmjs.com/package/rollup-plugin-buble), it is simple to use and we don't need to install [babel-preset-es2015-rollup](https://www.npmjs.com/package/babel-preset-es2015-rollup).   
 Use this command to save buble to our dev dependencies :  
 
 ```
@@ -101,10 +104,11 @@ Now, import buble in ``rollup.config.js`` file and add ``plugins`` property, so 
 ```javascript
 // import buble
 import buble from 'rollup-plugin-buble';
+
 export default {
   entry: 'src/main.js',  
   dest: 'dist/bundle.js', // equivalent to --output or > bundle.js
-  plugins:[buble()]  // plugins property to specify plugins to use,
+  plugins:[buble()]  // plugins property to specify plugins to use.
 };
 ```
 

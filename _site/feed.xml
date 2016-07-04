@@ -5,8 +5,8 @@
     <description></description>
     <link>https://ismnoiet.github.io/</link>
     <atom:link href="https://ismnoiet.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 23 Jun 2016 19:55:18 +0100</pubDate>
-    <lastBuildDate>Thu, 23 Jun 2016 19:55:18 +0100</lastBuildDate>
+    <pubDate>Mon, 04 Jul 2016 18:43:55 +0100</pubDate>
+    <lastBuildDate>Mon, 04 Jul 2016 18:43:55 +0100</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
     
       <item>
@@ -17,15 +17,16 @@ is the next generation module bundler as we can read from
 their official website.
 which means we can write next generation modules(es6 modules) and then use rollup to bundle(concatenate) them in a single file.&lt;/p&gt;
 
-&lt;p&gt;First of all, we must install rollup globally to make the &lt;code class=&quot;highlighter-rouge&quot;&gt;rollup&lt;/code&gt; command availabe in the command line, here is the snippet to install it : 
-&lt;code class=&quot;highlighter-rouge&quot;&gt;
-npm install -g rollup
-&lt;/code&gt;
-&lt;strong&gt;Note :&lt;/strong&gt; in some computers we need to be an administrator
+&lt;p&gt;The first thing to do obviously is to install rollup, for this article i choosed to install it globally, so the &lt;code class=&quot;highlighter-rouge&quot;&gt;rollup&lt;/code&gt; command availabe in the command line, here is the snippet to install it:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm install -g rollup
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Note :&lt;/strong&gt; in some computers we need to be an administrator
 in order to install node global modules in this case just 
 proceed the previous command with a leading &lt;code class=&quot;highlighter-rouge&quot;&gt;sudo&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;After installing rollup, we can try to use it for the following simple example :&lt;/p&gt;
+&lt;p&gt;After installing rollup, we can try to use it with the following simple example :&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cm&quot;&gt;/* src/UsersCollection.js  */&lt;/span&gt;
 
@@ -50,16 +51,18 @@ proceed the previous command with a leading &lt;code class=&quot;highlighter-rou
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;If we run : 
-&lt;code class=&quot;highlighter-rouge&quot;&gt;
-rollup src/main.js 
-&lt;/code&gt;
-the needed parts of code from &lt;code class=&quot;highlighter-rouge&quot;&gt;UsersCollection.js&lt;/code&gt; will be added to &lt;code class=&quot;highlighter-rouge&quot;&gt;main.js&lt;/code&gt; and the bundle file will be printed out
+&lt;p&gt;If we run :&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rollup src/main.js 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;the needed parts of code from &lt;code class=&quot;highlighter-rouge&quot;&gt;UsersCollection.js&lt;/code&gt; will be added to &lt;code class=&quot;highlighter-rouge&quot;&gt;main.js&lt;/code&gt; and the bundle file will be printed out
 to the terminal, without being stored persistently in an output file. &lt;br /&gt;
-If we want to store the output content to a file we can use this command :
-&lt;code class=&quot;highlighter-rouge&quot;&gt;
-rollup src/main.js &amp;gt; bundle.js
-&lt;/code&gt;&lt;/p&gt;
+If we want to store the output content to a file we can use this command :&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rollup src/main.js &amp;gt; bundle.js
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;That is nice,                                                                                                 &lt;br /&gt;
 but what if  we want some sort of configuration file like &lt;code class=&quot;highlighter-rouge&quot;&gt;webpack.config.js&lt;/code&gt; for webpack if we are familiar with it, so we don’t have to type everytime the destination file. &lt;br /&gt;
@@ -90,7 +93,7 @@ but we still have one issue, the generated output is es6 code and till this mome
 
 &lt;p&gt;For this job i can mention two tools that can be used with rollup, &lt;a href=&quot;https://www.npmjs.com/package/rollup-plugin-buble&quot;&gt;buble&lt;/a&gt; and &lt;a href=&quot;https://www.npmjs.com/package/rollup-plugin-babel&quot;&gt;babel plugin&lt;/a&gt;, may be there are others but i think these two options are fine, just pick one of them.&lt;/p&gt;
 
-&lt;p&gt;In this article i picked &lt;a href=&quot;https://www.npmjs.com/package/rollup-plugin-buble&quot;&gt;buble&lt;/a&gt;, it is simple to use and we don’t need to install &lt;a href=&quot;https://www.npmjs.com/package/babel-preset-es2015-rollup&quot;&gt;babel-preset-es2015-rollup&lt;/a&gt;.
+&lt;p&gt;In this article i picked &lt;a href=&quot;https://www.npmjs.com/package/rollup-plugin-buble&quot;&gt;buble&lt;/a&gt;, it is simple to use and we don’t need to install &lt;a href=&quot;https://www.npmjs.com/package/babel-preset-es2015-rollup&quot;&gt;babel-preset-es2015-rollup&lt;/a&gt;. &lt;br /&gt;
 Use this command to save buble to our dev dependencies :&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm install rollup-plugin-buble --save-dev
@@ -101,10 +104,11 @@ Use this command to save buble to our dev dependencies :&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// import buble&lt;/span&gt;
 &lt;span class=&quot;kr&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;buble&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;rollup-plugin-buble&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
 &lt;span class=&quot;kr&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;na&quot;&gt;entry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;src/main.js&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;  
   &lt;span class=&quot;na&quot;&gt;dest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;dist/bundle.js&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// equivalent to --output or &amp;gt; bundle.js&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;plugins&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;buble&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()]&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// plugins property to specify plugins to use,&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;plugins&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;buble&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()]&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// plugins property to specify plugins to use.&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
