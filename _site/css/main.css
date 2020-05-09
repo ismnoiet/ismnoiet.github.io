@@ -390,6 +390,20 @@ header {
       padding-left: 35px; }
       .page .right .content-ul ul {
         padding-left: 20px; }
+  .page .app-info-container {
+    margin-top: 10px;
+    display: flex;
+    align-items: center; }
+  .page .app-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    margin-right: 10px; }
+  .page .store-badge {
+    width: 80px;
+    margin-left: 20px; }
+  .page a:hover {
+    background-color: white !important; }
 
 @media screen and (max-width: 1200px) and (min-width: 770px) {
   .page {

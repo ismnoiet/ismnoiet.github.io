@@ -5,7 +5,7 @@ layout: default
 <div class="page clearfix" index>
     <div class="left">
         <h1>Welcome to Hamza's Blog!</h1>
-        <small>Here i share some ideas about programming, tools and other subjects</small>
+        <small>Here I share some ideas about programming, tools and other subjects</small>
         <hr>
         <ul>
             {% for post in paginator.posts %}
@@ -119,7 +119,7 @@ layout: default
 
                     {% if max == min %}
                         {% assign diff = 1 %}
-                    {% else %}    
+                    {% else %}
                         {% assign diff = max | minus: min %}
                     {% endif %}
 

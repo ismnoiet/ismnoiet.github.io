@@ -23,7 +23,11 @@
                             {% else %}
                         <a href="{{ my_page.url | prepend: site.baseurl }}">
                         {% endif %}
+                        {% if my_page.largeIcon%}
+                            <i class="fa fa-{{my_page.largeIcon}}" style="font-size: 20px;"></i>{{ my_page.title }}
+                        {% else %}
                             <i class="fa fa-{{my_page.icon}}"></i>{{ my_page.title }}
+                        {% endif %}
                         </a>
                     </li>
                     {% endif %}

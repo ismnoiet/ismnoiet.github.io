@@ -18,7 +18,7 @@
         padding: 20px 30px;
         line-height: 1.6;
         font-size: 16px;
-        background-color: white;       
+        background-color: white;
         box-shadow:0 2px 4px 1px rgba(0, 0, 0, 0.06);
         >h1 {
             margin-bottom: -10px;
@@ -57,7 +57,7 @@
                     a {
                         background-color: #F5F8F9;
                         padding: 5px;
-                        color: #9A9BA1; 
+                        color: #9A9BA1;
                         font-size: 90%;
                         transition: 0.3s ease;
                         &:hover {
@@ -69,10 +69,10 @@
                     i {
                         color: #c6cbe9;
                     }
-                    a {                        
+                    a {
                         background-color: #F5F8F9;
-                        padding: 5px;                        
-                        color: #9A9BA1;                        
+                        padding: 5px;
+                        color: #9A9BA1;
                         font-size: 80%;
                         transition: 0.3s ease;
                         &:hover {
@@ -102,7 +102,7 @@
         .side {
             box-sizing: border-box;
             background-color: white;
-            box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.06); 
+            box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.06);
             padding-bottom: 1px;
             -ms-word-break: break-all;
             word-break: break-all;
@@ -137,6 +137,24 @@
                 padding-left: 20px;
             }
         }
+    }
+    .app-info-container {
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+    }
+    .app-logo {
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+        margin-right: 10px;
+    }
+    .store-badge{
+        width: 80px;
+        margin-left: 20px;
+    }
+    a:hover{
+        background-color: white !important;
     }
 }
 @media screen and (max-width:1200px) and (min-width: 770px) {

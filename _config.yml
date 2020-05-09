@@ -6,23 +6,23 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Hamza 
-brief-intro: Software Developer
+title: Hamza
+brief-intro: Software Engineer
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://ismnoiet.github.io" # the base hostname & protocol for your site
 
 permalink: /:year/:month/:day/:title/
 
 # other links
-twitter_username: ham_ism 
-github_username: ismnoiet 
+twitter_username: ham_ism
+github_username: ismnoiet
 email: ismnoiet@gmail.com
 
-description_footer: Be Thankful Over Few God Makes You Happy Over Many 
+description_footer: Be Thankful Over Few God Makes You Happy Over Many
 
 # comments
 # replace my disqus username with yours.
-disqus_shortname: ismnoiet-github-blog 
+disqus_shortname: ismnoiet-github-blog
 
 # google_analytics_id: UA-72449510-4 # google 分析追踪id
 

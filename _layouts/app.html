@@ -1,0 +1,38 @@
+---
+layout: default
+---
+
+<div class="page clearfix" post>
+    <div class="left">
+        <h1>📱{{page.title}}</h1>
+        <hr>
+        {{content}}
+        {% for app in page.apps %}
+        <div class="app-info-container">
+            <img src="{{app.logo}}" class="app-logo" />
+            <div>{{app.name}} - {{app.description}}
+            </div>
+            <a href="{{app.appstore-link}}" target="_blank">
+                <img src="/assets/images/appstore_badge.png" class="store-badge" />
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+    <button class="anchor"><i class="fa fa-anchor"></i></button>
+    <div class="right">
+        <div class="wrap">
+
+            <!-- Content -->
+            <div class="side content">
+                <div>
+                    Content
+                </div>
+                <ul id="content-side" class="content-ul">
+                </ul>
+            </div>
+            <!-- 其他div框放到这里 -->
+            <!-- <div class="side">bbbb</div> -->
+        </div>
+    </div>
+</div>
+<script src="{{ "/js/pageContent.js " | prepend: site.baseurl }}" charset="utf-8"></script>

@@ -26,7 +26,7 @@
     <header id="top">
     <div class="wrapper">
         <a href="/" class="brand">Hamza</a>
-        <small>Software Developer</small>
+        <small>Software Engineer</small>
         <button id="headerMenu" class="menu"><i class="fa fa-bars"></i></button>
         <nav id="headerNav">
             <ul>
@@ -44,7 +44,9 @@
                         
                         <a href="/archive/">
                         
+                        
                             <i class="fa fa-archive"></i>Archives
+                        
                         </a>
                     </li>
                     
@@ -54,7 +56,9 @@
                         
                         <a href="/category/">
                         
+                        
                             <i class="fa fa-th-list"></i>Categories
+                        
                         </a>
                     </li>
                     
@@ -64,7 +68,21 @@
                         
                         <a href="/tag/">
                         
+                        
                             <i class="fa fa-tags"></i>Tags
+                        
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/apps/">
+                        
+                        
+                            <i class="fa fa-mobile" style="font-size: 20px;"></i>Apps
+                        
                         </a>
                     </li>
                     
@@ -74,7 +92,9 @@
                         
                         <a href="/about/">
                         
-                            <i class="fa fa-heart"></i>About
+                        
+                            <i class="fa fa-heart"></i>About Me
+                        
                         </a>
                     </li>
                     
@@ -166,19 +186,18 @@ which means we can write next generation modules(es6 modules) and then use rollu
 
 <p>The first thing to do obviously is to install rollup, for this article i choosed to install it globally, so the <code class="highlighter-rouge">rollup</code> command availabe in the command line, here is the snippet to install it:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>npm install -g rollup
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install -g rollup
+</code></pre></div></div>
 <p><strong>Note :</strong> in some computers we need to be an administrator
 in order to install node global modules in this case just 
 proceed the previous command with a leading <code class="highlighter-rouge">sudo</code>.</p>
 
 <p>After installing rollup, we can try to use it with the following simple example :</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="cm">/* src/UsersCollection.js  */</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/* src/UsersCollection.js  */</span>
 
-<span class="kr">class</span> <span class="nx">UsersCollection</span><span class="p">{</span>
-	<span class="nx">constructor</span><span class="p">(</span><span class="nx">users</span> <span class="o">=</span> <span class="p">[]){</span>
+<span class="kd">class</span> <span class="nx">UsersCollection</span><span class="p">{</span>
+	<span class="kd">constructor</span><span class="p">(</span><span class="nx">users</span> <span class="o">=</span> <span class="p">[]){</span>
 		<span class="k">this</span><span class="p">.</span><span class="nx">users</span> <span class="o">=</span> <span class="nx">users</span>
 	<span class="p">}</span>
 	
@@ -186,49 +205,44 @@ proceed the previous command with a leading <code class="highlighter-rouge">sudo
 		<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">users</span><span class="p">);</span>
 	<span class="p">}</span>
 <span class="p">}</span>
-<span class="kr">export</span> <span class="k">default</span> <span class="nx">UsersCollection</span><span class="p">;</span>
+<span class="k">export</span> <span class="k">default</span> <span class="nx">UsersCollection</span><span class="p">;</span>
 
 <span class="cm">/* src/main.js will import UsersCollection and use it for its need. */</span>
 <span class="cm">/* src/main.js */</span>
 
-<span class="kr">import</span> <span class="nx">UsersCollection</span> <span class="nx">from</span> <span class="s1">'./UsersCollection'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">UsersCollection</span> <span class="k">from</span> <span class="s1">'./UsersCollection'</span><span class="p">;</span>
 
-<span class="kr">const</span> <span class="nx">usersCollection</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">UsersCollection</span><span class="p">([</span><span class="s1">'user1'</span><span class="p">,</span><span class="s1">'user2'</span><span class="p">]);</span>
+<span class="kd">const</span> <span class="nx">usersCollection</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">UsersCollection</span><span class="p">([</span><span class="s1">'user1'</span><span class="p">,</span><span class="s1">'user2'</span><span class="p">]);</span>
 <span class="nx">usersCollection</span><span class="p">.</span><span class="nx">log</span><span class="p">();</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>If we run :</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>rollup src/main.js 
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rollup src/main.js 
+</code></pre></div></div>
 <p>the needed parts of code from <code class="highlighter-rouge">UsersCollection.js</code> will be added to <code class="highlighter-rouge">main.js</code> and the bundle file will be printed out
 to the terminal, without being stored persistently in an output file. <br />
 If we want to store the output content to a file we can use this command :</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>rollup src/main.js &gt; bundle.js
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rollup src/main.js &gt; bundle.js
+</code></pre></div></div>
 
 <p>That is nice,                                                                                                 <br />
 but what if  we want some sort of configuration file like <code class="highlighter-rouge">webpack.config.js</code> for webpack if we are familiar with it, so we don’t have to type everytime the destination file. <br />
 Well, rollup has an answer for that, just create <code class="highlighter-rouge">rollup.config.js</code> file in the root of our project and when calling the rollup command add <code class="highlighter-rouge">-c</code> flag which means hi rollup i have a configuration file please consider it. <br />
 Here is the command that we will use :</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>rollup src/main.js -c  
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rollup src/main.js -c  
+</code></pre></div></div>
 
 <p>At this moment <code class="highlighter-rouge">rollup.config.js</code> file is empty and does nothing, so we need to add some configuration, here is a snippet of minimal configuration :</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="c1">// rollup.config.js</span>
-<span class="kr">export</span> <span class="k">default</span> <span class="p">{</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// rollup.config.js</span>
+<span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
   <span class="na">entry</span><span class="p">:</span> <span class="s1">'src/main.js'</span><span class="p">,</span>  
   <span class="na">dest</span><span class="p">:</span> <span class="s1">'dist/bundle.js'</span> <span class="c1">// equivalent to --output or &gt; bundle.js</span>
 <span class="p">};</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <ul>
   <li><strong>entry :</strong> a property to specify the source files.</li>
@@ -243,22 +257,20 @@ but we still have one issue, the generated output is es6 code and till this mome
 <p>In this article i picked <a href="https://www.npmjs.com/package/rollup-plugin-buble">buble</a>, it is simple to use and we don’t need to install <a href="https://www.npmjs.com/package/babel-preset-es2015-rollup">babel-preset-es2015-rollup</a>. <br />
 Use this command to save buble to our dev dependencies :</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>npm install rollup-plugin-buble --save-dev
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install rollup-plugin-buble --save-dev
+</code></pre></div></div>
 
 <p>Now, import buble in <code class="highlighter-rouge">rollup.config.js</code> file and add <code class="highlighter-rouge">plugins</code> property, so we end up with this :</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="c1">// import buble</span>
-<span class="kr">import</span> <span class="nx">buble</span> <span class="nx">from</span> <span class="s1">'rollup-plugin-buble'</span><span class="p">;</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// import buble</span>
+<span class="k">import</span> <span class="nx">buble</span> <span class="k">from</span> <span class="s1">'rollup-plugin-buble'</span><span class="p">;</span>
 
-<span class="kr">export</span> <span class="k">default</span> <span class="p">{</span>
+<span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
   <span class="na">entry</span><span class="p">:</span> <span class="s1">'src/main.js'</span><span class="p">,</span>  
   <span class="na">dest</span><span class="p">:</span> <span class="s1">'dist/bundle.js'</span><span class="p">,</span> <span class="c1">// equivalent to --output or &gt; bundle.js</span>
   <span class="na">plugins</span><span class="p">:[</span><span class="nx">buble</span><span class="p">()]</span>  <span class="c1">// plugins property to specify plugins to use.</span>
 <span class="p">};</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p><strong>Finally</strong> rerun <code class="highlighter-rouge">buble src/main.js -c</code> command, and we should get a bundle file <code class="highlighter-rouge">dist/bundle.js</code> containing es5 code that all browsers understand.</p>
 
