@@ -14,9 +14,9 @@ I'm Hamza, a software engineer working with different technologies.
 Recently I'm working on web and mobile related stuff.
 You can find me on the internet often under the username **ismnoiet**, asking and answering questions sometimes and contributing to open-source projects.
 
-[Check out my latest open-source projects and experiments on GitHub](https://github.com/ismnoiet).
+[Check out my apps](/apps).
 
-[Check out my apps](https://github.com/ismnoiet).
+[Check out my latest open-source projects and experiments on GitHub](https://github.com/ismnoiet).
 
 If you want to get in touch or have questions, I'll be happy to hear from you, just drop me a few lines at: ismnoiet@gmail.com
 
