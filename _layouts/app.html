@@ -12,9 +12,16 @@ layout: default
             <img src="{{app.logo}}" class="app-logo" />
             <div>{{app.name}} - {{app.description}}
             </div>
+            {% if app.appstore-link %}
             <a href="{{app.appstore-link}}" target="_blank">
                 <img src="/assets/images/appstore_badge.png" class="store-badge" />
             </a>
+            {% endif %}
+            {% if app.googleplay-link %}
+            <a href="{{app.googleplay-link}}" target="_blank">
+                <img src="/assets/images/googleplay_badge.png" class="store-badge" />
+            </a>
+            {% endif %}
         </div>
         {% endfor %}
     </div>

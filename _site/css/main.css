@@ -401,6 +401,7 @@ header {
     margin-right: 10px; }
   .page .store-badge {
     width: 80px;
+    height: 26px;
     margin-left: 20px; }
   .page a:hover {
     background-color: white !important; }
